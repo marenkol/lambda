@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700);
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+	font: 400 16px/1.5 'lato', sans-serif;
+	color:  #4c4c4c;
+
+}
+
+/* Typography */
+h1 {
+	font: 400 90px/1.3 'Yeseva One', sans-serif;
+	text-shadow: 0px 1px 2px rgba(1, 1, 1, 0.64);
+	color: #FFF;
+}
+.ba-title--gold {
+	font: 400 36px/1.5 'Yeseva One', sans-serif;
+	color: #cc9900;
+	padding-bottom: 33px;
+	margin-bottom: 25px;
+	display: block;
+	background: url(../img/divider.png) 50% 100% no-repeat;
+}
+.ba-title--white {
+	font: 400 36px/1.5 'Yeseva One', sans-serif;
+	color: #fff;
+	padding-bottom: 33px;
+	margin-bottom: 25px;
+	display: block;
+	background: url(../img/divider-white-small.png) 50% 100% no-repeat;
+}
+a{
+	text-decoration: none;
+	display: block;
+	color: #FFF;
+}
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 40px;
+	padding-right: 40px;
+	max-width: 1250px;
+	/* border: 2px solid #eee; */
+}
+
+/* HEADER */
+.ba-header {
+	position: fixed;
+	z-index: 3;
+	background: -webkit-linear-gradient(top, rgba(14,14,14,1) 12%,rgba(125,126,125,0) 100%,rgba(125,126,125,0) 101%);
+	opacity: .9;
+	height: 110px;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+.ba-container--relative {
+	position: relative;
+}
+.ba-menu {
+	position: absolute;
+	z-index: 10;
+	top: 50px;
+	right: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.ba-menu li {
+	float: left;
+	padding-left: 26px;
+	padding-right: 25px;
+}
+.ba-menu li:first-child {
+	padding-left: 0;
+}
+.ba-menu .ba-menu__icon{
+	padding-left: 0;
+	padding-right: 15px;
+	/* margin-right: 40px; */
+}
+.ba-menu__icon .fa{
+	color: #cc9900;
+}
+@media (max-width: 959px) {
+	.ba-menu {
+		display: none;
+	}
+}
+.ba-menu a {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	font-family: 'Gentium Book Basic', serif;
+	font-weight: 700;
+	font-size: 21px;
+}
+.ba-menu a:not([class="ba-fa"]):after {
+	content:'';
+	position: absolute;
+	background-color: #FFF;
+	height: 3px;
+	width: 100%;
+	left: 0;
+	bottom: 100%;
+	transition: opacity .3s, transform .3s;
+	opacity: 0;
+	transform: translateY(-10px);
+}
+.ba-menu a:hover:after {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ba-menu a[class="ba-fa"]:hover .fa{
+	color: #FFF;
+	transition: color .3s;
+}
+
+
+
+
+
+
+/* INTRO */
+.ba-intro {
+	background: #282829 url(../img/intro-bg.jpg) 50% no-repeat;
+	background-size: cover;
+	height: 100vh;
+	padding-top: 160px;
+}
+.ba-intro__content {
+	max-width: 970px;
+	margin: 0 auto;
+	text-align: center;
+	/* border: 1px solid #fff; */
+}
+.ba-intro__title{
+	padding-bottom: 67px;
+	margin-bottom: 35px;
+	background: url(../img/divider-white.png) 48% 100% no-repeat;
+}
+.ba-button {
+	display: inline-block;
+	border: 1px solid #fff;
+	background-color:  rgba(255, 255, 255, 0.28);
+	font-size: 18px;
+	line-height: 55px;
+	padding: 0 52px;
+	color: #fff;
+	margin-right: 12px;
+	margin-left: 13px;
+	transition: background .3s linear;
+}
+.ba-button:hover {
+	border: 1px solid #000000;
+	background-color:  rgba(0, 0, 0, 0.7);
+	opacity: 0.8;
+}
+
+
+/* ABOUT */
+.ba-about {
+	background: #FFF url(../img/pattern.jpg) 50% no-repeat;
+	background-size: cover;
+	padding: 35px 0 20px 70px;
+	position: relative;
+}
+.ba-about:after {
+	position: absolute;
+	content:'';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 24%, rgba(197,195,197,1) 99%, rgba(196,194,196,1) 100%);
+	opacity: .3;
+}
+.ba-about__flex {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.ba-about__content {
+	max-width: 430px;
+	text-align: center;
+}
+.ba-about__img {
+	margin-top: 35px;
+	margin-left: 80px;
+}
+.ba-about__dish {
+	margin-right: 75px;
+}
+
+
+/* igredients */
+.ba-igredients {
+	background: #695648 url(../img/bg-igredients.jpg) 50% no-repeat;
+	background-size: cover;
+	padding: 100px 0;
+	color: #FFF;
+}
+.ba-igredients_content {
+	background-color:  rgba( 0, 0, 0 , 0.67);
+	max-width: 570px;
+	padding: 40px 70px 55px;
+	text-align: center;
+}
+.ba-igredients_content p {
+	padding-bottom: 50px;
+}
+.ba-igredients_content img {
+	margin-right: 12px;
+	margin-left: 12px;
+}
