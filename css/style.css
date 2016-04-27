@@ -278,7 +278,7 @@ textarea {
 	width: 70px;
 	line-height: 21px;
 	content: "Special";
-	font: 400 14px/1.7 'lato' sans-serif;
+	font: 400 14px/1.7 'lato', sans-serif;
 	color:  #f8fafa;
 	text-align-last: center;
 	background-color: rgba(200, 159, 45, .7);
@@ -575,7 +575,7 @@ textarea {
 	}
 	.ba-reservations__column--flex img {
 		width: 190px;
-		height: 290;
+		height: 290px;
 	}
 	.ba-title--gold,
 	.ba-title--white {
@@ -588,7 +588,7 @@ textarea {
 @media(max-width: 479px) {
 	.ba-reservations__column--flex img {
 		width: 150px;
-		height: 250;
+		height: 250px;
 	}
 
 	.ba-reviews {
