@@ -142,8 +142,8 @@ textarea {
 
 .ba-menu a {
 	display: block;
-	padding-left: 26px;
-	padding-right: 25px;
+	padding-left: 25px;
+	padding-right: 26px;
 	text-decoration: none;
 	color: #FFF;
 	font-family: 'Gentium Book Basic', serif;
@@ -399,7 +399,8 @@ textarea {
 	padding: 5px 60px;
 }
 .ba-reservations__button:hover {
-	background-color: #c8c6c6;
+	background-color: transparent;
+	color: #000;
 }
 
 
@@ -417,15 +418,27 @@ textarea {
 .ba-footer__flex {
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
 }
 .ba-footer__about {
-	max-width: 370px;
+	flex-basis: 370px;
+	flex-shrink: 2;
 }
 .ba-footer__column{
-	max-width: 370px;
+	flex-basis: 230px;
+	flex-grow: 5;
 }
-
+.ba-footer__icons {
+	padding-top: 15px;
+}
+.ba-footer__icons a{
+	display: inline-block;
+	font-size: 30px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.ba-footer__icons a:hover {
+	color: #cc9900;
+}
 
 
 /* MEDIA */
@@ -441,6 +454,11 @@ textarea {
 		margin-top: 20px;
 		order:2;
 	}
+	.ba-menu a {
+		font-size: 18px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 
@@ -451,10 +469,7 @@ textarea {
 	.ba-intro h1 {
 		font-size: 60px;
 	}
-
-
 	.ba-menu {
-		/* display: none; */
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -468,6 +483,9 @@ textarea {
 		padding: 0;
 		float: none;
 		border-bottom: 1px solid rgba(255, 255, 255, .2);
+	}
+	.ba-menu__icon {
+		margin-right: 40px;
 	}
 	.ba-overlay {
 		position: fixed;
@@ -493,6 +511,7 @@ textarea {
   		opacity: 0.5;
   	}
 }
+/* toggle START */
 .ba-toggle{
  border: none;
  outline: none;
@@ -554,12 +573,32 @@ textarea {
 .ba-toggle__icon:after{
  transform: translateY(10px);
 }
+/* toggle END */
+
+
+
+
+/* @media(max-width: 900px) {
+	.ba-footer__flex {
+		flex-direction: column;
+		align-items: center;
+	}
+} */
 
 
 
 
 
 @media(max-width: 767px) {
+	.ba-footer__flex {
+		flex-direction: column;
+		align-items: center;
+	}
+	.ba-footer__about, .ba-footer__column {
+		flex-basis: 280px;
+		max-width: 300px;
+	}
+
 	.ba-intro h1 {
 		font-size: 40px;
 	}
@@ -608,5 +647,17 @@ textarea {
 	}
 	.ba-button {
 		padding: 0 20px;
+	}
+	.ba-footer p {
+		font-size: 14px;
+	}
+}
+@media(max-width: 400px) {
+	.ba-logo {
+		padding-top: 20px;
+	}
+	.ba-logo img {
+		width: 100px;
+		height: 65px;
 	}
 }
