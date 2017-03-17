@@ -12,7 +12,7 @@ body{
 h1 {
 	font: 400 90px/1.3 'Yeseva One', sans-serif;
 	text-shadow: 0px 1px 2px rgba(1, 1, 1, 0.64);
-	color: #FFF;
+	color: #fff;
 }
 .ba-title--gold {
 	font: 400 36px/1.5 'Yeseva One', sans-serif;
@@ -95,14 +95,18 @@ textarea {
 	padding-left: 40px;
 	padding-right: 40px;
 	max-width: 1250px;
-	/* border: 2px solid #eee; */
+}
+@media (max-width: 500px) {
+	.ba-lambda-container {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
 }
 
 /* INTRO */
 .ba-intro {
 	background: #282829 url(../img/intro-bg.jpg) 50% no-repeat;
 	background-size: cover;
-	/* height: 100vh; */
 }
 
 /* HEADER */
@@ -126,10 +130,9 @@ textarea {
 .ba-menu__icon  {
 	display: inline-block;
 	padding-left: 0;
-	padding-right: 15px;
 }
 .ba-menu__icon:last-child {
-	padding-right: 0;
+	margin-right: 40px;
 }
 .ba-menu__icon .fa{
 	color: #cc9900;
@@ -138,6 +141,12 @@ textarea {
 .ba-menu__icon:hover .fa{
 	color: #FFF;
 	transition: color .3s;
+}
+@media (min-width: 960px) {
+	.ba-menu__icon {
+		padding-right: 7px;
+		padding-left: 7px;
+	}
 }
 
 .ba-menu a {
@@ -156,6 +165,16 @@ textarea {
 	border-top: 3px solid #fff;
 	transition: all .3s;
 }
+
+/* .ba-nav-socials {
+	display: none;
+}
+@media (min-width: 500px) {
+	.ba-nav-socials {
+		display: block;
+	}
+} */
+
 
 .ba-intro__content {
 	max-width: 970px;
@@ -245,6 +264,11 @@ textarea {
 }
 .ba-igredients_content p {
 	padding-bottom: 50px;
+}
+@media(max-width: 500px) {
+	.ba-igredients_content p {
+		padding-bottom: 10px;
+	}
 }
 .ba-igredients_content img {
 	margin-right: 12px;
@@ -455,7 +479,7 @@ textarea {
 		order:2;
 	}
 	.ba-menu a {
-		font-size: 18px;
+		font-size: 17px;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -485,8 +509,9 @@ textarea {
 		border-bottom: 1px solid rgba(255, 255, 255, .2);
 	}
 	.ba-menu__icon {
-		margin-right: 40px;
+		margin-right: 20px;
 	}
+
 	.ba-overlay {
 		position: fixed;
 		left: 0;
@@ -626,8 +651,8 @@ textarea {
 }
 @media(max-width: 479px) {
 	.ba-reservations__column--flex img {
-		width: 150px;
-		height: 250px;
+		width: 140px;
+		height: 240px;
 	}
 
 	.ba-reviews {
