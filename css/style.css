@@ -158,22 +158,31 @@ textarea {
 	font-family: 'Gentium Book Basic', serif;
 	font-weight: 700;
 	font-size: 21px;
-	border-top: 3px solid transparent;
 	transition: all .3s;
+	position: relative;
 }
-.ba-menu a:hover {
-	border-top: 3px solid #fff;
-	transition: all .3s;
+.ba-menu a:before {
+	content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 1);
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
 
-/* .ba-nav-socials {
-	display: none;
+.ba-menu a:hover:before {
+	left: 0;
+	right: 0;
 }
-@media (min-width: 500px) {
-	.ba-nav-socials {
-		display: block;
-	}
-} */
+
+
 
 
 .ba-intro__content {
@@ -396,6 +405,10 @@ textarea {
 	justify-content: space-around;
 	padding-bottom: 20px;
 }
+.ba-filds__column {
+	margin-right: 2px;
+	margin-left: 2px;
+}
 .ba-reservations__form label{
 	display: block;
 	font: 700 14px/1.5 'Open Sans', sans-serif;
@@ -409,6 +422,9 @@ textarea {
 	padding: 9px;
 	width: 200px;
 	margin-bottom: 10px;
+}
+.ba-filds__select {
+	padding: 10.5px;
 }
 .ba-reservations__form input:focus,
 .ba-reservations__form select:focus {
